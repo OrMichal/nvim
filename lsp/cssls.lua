@@ -1,6 +1,6 @@
 return {
   cmd = { "vscode-css-language-server", "--stdio" },
-  filetypes = { "css", "scss", "less", "vue" },
+  filetypes = { "css", "scss", "less" },
   init_opitions = {
     provideFormatter = true,
   },

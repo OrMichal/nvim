@@ -1,12 +1,5 @@
 return {
-  cmd = { "clangd" },
-  root_markers = { ".clangd", "compile_commands.json" },
-  filetypes = { "c" },
-  capabilities = {
-    textDocument = {
-      semanticTokens = {
-        multilineTokenSupport = true,
-      }
-    }
-  }
+  cmd = { 'clangd', '--background-index' },
+  root_markers = { 'compile_commands.json', 'compile_flags.txt' },
+  filetypes = { 'c', 'cpp' },
 }
