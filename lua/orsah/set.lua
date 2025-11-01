@@ -29,4 +29,4 @@ vim.opt.colorcolumn = ""
 
 vim.g.mapleader = " "
 
-vim.opt.winborder = "rounded"
+vim.opt.winborder = "single"

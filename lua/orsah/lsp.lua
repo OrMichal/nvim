@@ -1,4 +1,5 @@
 local cmp = require("cmp")
+require("orsah.special-lsp")
 
 vim.lsp.enable({
   "lua_ls",
@@ -7,7 +8,8 @@ vim.lsp.enable({
   "html",
   "cssls",
   "ts_ls",
-  "vue_ls"
+  "svelte",
+  "rust_analyzer"
 })
 
 vim.diagnostic.config({
