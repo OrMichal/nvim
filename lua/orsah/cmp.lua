@@ -23,3 +23,13 @@ cmp.setup({
     { name = "buffer" },
   }),
 })
+
+-- Disable cmp for .vue files (Coc will handle completion)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "vue",
+  callback = function()
+    require("cmp").setup.buffer({
+      enabled = false
+    })
+  end,
+})

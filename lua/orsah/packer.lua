@@ -9,10 +9,7 @@ return require("packer").startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  use({
-    "rktjmp/lush.nvim",
-    requires = { "nvim-treesitter/nvim-treesitter" }, -- optional, if you want treesitter integration
-  })
+  use {"eldritch-theme/eldritch.nvim"}
 
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
   use("nvim-treesitter/playground")
@@ -61,5 +58,15 @@ return require("packer").startup(function(use)
     config = function()
       require("mason").setup()
     end
+  }
+  use { "neoclide/coc.nvim", branch = "release" }
+  use {
+    'yaegassy/coc-volar',
+    run = 'yarn install --frozen-lockfile'
+  }
+
+  use {
+    'yaegassy/coc-volar-tools',
+    run = 'yarn install --frozen-lockfile'
   }
 end)

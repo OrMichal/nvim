@@ -99,21 +99,36 @@ _G.packer_plugins = {
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["coc-volar"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/coc-volar",
+    url = "https://github.com/yaegassy/coc-volar"
+  },
+  ["coc-volar-tools"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/coc-volar-tools",
+    url = "https://github.com/yaegassy/coc-volar-tools"
+  },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["eldritch.nvim"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/eldritch.nvim",
+    url = "https://github.com/eldritch-theme/eldritch.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
   ["lsp_signature.nvim"] = {
-    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\16hint_enable\2\20floating_window\2\14max_width\3P\15max_height\3\b\15toggle_key\n<C-k>\17hi_parameter\vSearch\tbind\2\16hint_prefix\tïž” \nsetup\18lsp_signature\frequire\0" },
+    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\15max_height\3\b\tbind\2\17hi_parameter\vSearch\15toggle_key\n<C-k>\nsetup\18lsp_signature\frequire\0" },
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
   },
   ["mason.nvim"] = {
     config = { "\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0" },
@@ -170,14 +185,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\16hint_enable\2\20floating_window\2\14max_width\3P\15max_height\3\b\15toggle_key\n<C-k>\17hi_parameter\vSearch\tbind\2\16hint_prefix\tïž” \nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
-time([[Config for lsp_signature.nvim]], false)
 -- Config for: mason.nvim
 time([[Config for mason.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
 time([[Config for mason.nvim]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\15max_height\3\b\tbind\2\17hi_parameter\vSearch\15toggle_key\n<C-k>\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
+time([[Config for lsp_signature.nvim]], false)
 -- Config for: mini.nvim
 time([[Config for mini.nvim]], true)
 try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\17mini.comment\nsetup\15mini.pairs\frequire\0", "config", "mini.nvim")

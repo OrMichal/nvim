@@ -1,5 +1,4 @@
 local cmp = require("cmp")
-require("orsah.special-lsp")
 
 vim.lsp.enable({
   "lua_ls",

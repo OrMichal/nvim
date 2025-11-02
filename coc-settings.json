@@ -1,0 +1,9 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.useFloating": true,
+  "eslint.autoFixOnSave": true,
+  "volar.takeOverMode.enabled": true,
+  "tsserver.enable": false,
+  "volar.useWorkspaceTsdk": true,
+  "volar.autoCompleteRefs": true
+}
