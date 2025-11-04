@@ -1,9 +1,18 @@
 {
-  "coc.preferences.formatOnSave": true,
-  "coc.preferences.useFloating": true,
-  "eslint.autoFixOnSave": true,
-  "volar.takeOverMode.enabled": true,
-  "tsserver.enable": false,
-  "volar.useWorkspaceTsdk": true,
-  "volar.autoCompleteRefs": true
+  "languageserver": {
+    "vue": {
+      "command": "vue-language-server",
+      "filetypes": ["vue"],
+      "args": ["--stdio"],
+      "initializationOptions": {
+        "typescript": {
+          "tsdk": "./node_modules/typescript/lib"
+        }
+      }
+    }
+  },
+  "tsserver.tsdk": "./node_modules/typescript/lib",
+  "tsserver.pluginPaths": ["@vue/typescript-plugin"],
+  "tsserver.enable": true,
+  "typescript.suggest.enabled": true
 }
