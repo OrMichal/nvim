@@ -9,7 +9,7 @@ return require("packer").startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  use {"eldritch-theme/eldritch.nvim"}
+  use("rktjmp/lush.nvim")
 
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
   use("nvim-treesitter/playground")
@@ -60,6 +60,7 @@ return require("packer").startup(function(use)
     end
   }
   use { "neoclide/coc.nvim", branch = "release" }
+
   use {
     'yaegassy/coc-volar',
     run = 'yarn install --frozen-lockfile'
@@ -68,5 +69,13 @@ return require("packer").startup(function(use)
   use {
     'yaegassy/coc-volar-tools',
     run = 'yarn install --frozen-lockfile'
+  }
+
+  use {
+    'windwp/nvim-ts-autotag',
+    after = 'nvim-treesitter',
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end
   }
 end)

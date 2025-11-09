@@ -1,18 +1,10 @@
 {
-  "languageserver": {
-    "vue": {
-      "command": "vue-language-server",
-      "filetypes": ["vue"],
-      "args": ["--stdio"],
-      "initializationOptions": {
-        "typescript": {
-          "tsdk": "./node_modules/typescript/lib"
-        }
-      }
-    }
-  },
-  "tsserver.tsdk": "./node_modules/typescript/lib",
-  "tsserver.pluginPaths": ["@vue/typescript-plugin"],
-  "tsserver.enable": true,
-  "typescript.suggest.enabled": true
+  "volar.enable": true,
+  "volar.autoCompleteRefs": true,
+  "volar.codeLens.references": true,
+  "typescript.tsserver.pluginPaths": ["@vue/typescript-plugin"],
+  "eslint.autoFixOnSave": true,
+  "prettier.enable": true,
+  "suggest.autoTrigger": "always",
+  "suggest.noselect": false
 }

@@ -1,1 +1,1 @@
-vim.cmd("colorscheme eldritch")
+require("lush")(require("lush_theme.orsah_dark"))
