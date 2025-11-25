@@ -1,10 +1,24 @@
 {
+  "languageserver": {
+    "tsserver": {
+      "filetypes": ["typescript"]
+    },
+    "volar": {
+      "filetypes": ["vue"]
+    }
+  },
   "volar.enable": true,
   "volar.autoCompleteRefs": true,
   "volar.codeLens.references": true,
   "typescript.tsserver.pluginPaths": ["@vue/typescript-plugin"],
   "eslint.autoFixOnSave": true,
   "prettier.enable": true,
+
   "suggest.autoTrigger": "always",
-  "suggest.noselect": false
+  "suggest.noselect": false,
+  "suggest.floatConfig": {
+    "border": false,
+    "maxWidth": 80
+  }
 }
+

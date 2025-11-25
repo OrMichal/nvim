@@ -1,29 +1,42 @@
 local lush = require("lush")
 local hsl = lush.hsl
+--[[
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--]]
 
--- Warm, mellow-inspired palette
-local bg       = hsl(20, 10, 10)    -- dark brownish background
-local fg       = hsl(30, 40, 80)
-local comment  = hsl(25, 25, 45)
-local keyword  = hsl(25, 45, 65)
-local func     = hsl(90, 35, 70)
-local string   = hsl(21, 26, 68)
-local typecol  = hsl(200, 25, 65)
-local number   = hsl(15, 60, 55)
-local cursor   = hsl(360, 100, 100)
+local palette = {
+  bg      = hsl(0,   0,  10),
+  bg2     = hsl(40,  5,  14),
+  fg      = hsl(33, 42,  84),
+  comment = hsl(28,  9,  43),
+  keyword = hsl(130, 7,  50),
+  string  = hsl(82, 24,  61),
+  func    = hsl(0, 14,  61),
+  type    = hsl(138, 25,  40),
+  number  = hsl(22, 56,  52),
+  accent  = hsl(151, 29, 63),
+  error   = hsl(0,  60,  56),
+  warn    = hsl(37, 70,  52),
+}
 
 return lush(function()
   return {
-    Normal       { fg = fg, bg = bg },
-    Comment      { fg = comment, gui = "italic" },
-    Keyword      { fg = keyword },
-    Function     { fg = func },
-    String       { fg = string },
-    Type         { fg = typecol },
-    Number       { fg = number },
-    CursorLine   { bg = bg.lighten(5) },
-    CursorLineNr { fg = cursor },
-    Visual       { bg = bg.lighten(10) },
-    StatusLine   { fg = fg, bg = bg.lighten(10) },
+    Normal       { fg = palette.fg, bg = palette.bg },
+    Comment      { fg = palette.comment, gui = "italic" },
+    Keyword      { fg = palette.keyword },
+    String       { fg = palette.string },
+    Function     { fg = palette.func },
+    Type         { fg = palette.type },
+    Constant     { fg = palette.number },
+    Number       { fg = palette.number },
+    Operator     { fg = palette.accent },
+    Special      { fg = palette.accent },
+
+    Error        { fg = palette.error, gui = "bold" },
+    WarningMsg   { fg = palette.warn },
+
+    CursorLine   { bg = palette.bg2 },
+    Visual       { bg = palette.bg2.lighten(8) },
   }
 end)

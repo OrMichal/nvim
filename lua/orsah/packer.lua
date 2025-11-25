@@ -62,20 +62,86 @@ return require("packer").startup(function(use)
   use { "neoclide/coc.nvim", branch = "release" }
 
   use {
-    'yaegassy/coc-volar',
-    run = 'yarn install --frozen-lockfile'
-  }
-
-  use {
-    'yaegassy/coc-volar-tools',
-    run = 'yarn install --frozen-lockfile'
-  }
-
-  use {
     'windwp/nvim-ts-autotag',
     after = 'nvim-treesitter',
     config = function()
       require('nvim-ts-autotag').setup()
+    end
+  }
+--[[
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      local wk = require("which-key")
+
+      wk.setup {
+        plugins = {
+          spelling = { enabled = true },
+        },
+        win = {
+          border = "single",
+          position = "right",
+          margin = { 0, 0, 1, 0 },
+          padding = { 1, 2, 1, 2 },
+          winblend = 20,
+          zindex = 1000
+        },
+        layout = {
+          align = "right",
+          spacing = 3
+        },
+        show_help = false,
+      }
+    end
+  }
+  --]]
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+  }
+  use "nvim-lua/plenary.nvim"   -- required
+  use "MunifTanjim/nui.nvim"    -- required
+
+  use {
+    "folke/noice.nvim",
+    config = function()
+      require("noice").setup({
+        -- disable everything except commandline UI
+        lsp = {
+          progress = { enabled = false },
+          hover = { enabled = false },
+          signature = { enabled = false },
+        },
+        messages = { enabled = false },
+        notify = { enabled = false },
+        popupmenu = { enabled = false },
+        routes = {},
+        commands = {},
+        cmdline = {
+          view = "cmdline_popup"
+        },
+        views = {
+          cmdline_popup = {
+            position = {
+              row = 2,
+              col = "50%",
+            },
+            size = {
+              width = 70,
+              height = "auto",
+            },
+            border = {
+              style = "single",
+              padding = { 0, 1 },
+            }
+          }
+        }
+      })
     end
   }
 end)

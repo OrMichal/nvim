@@ -30,4 +30,4 @@ vim.opt.colorcolumn = ""
 vim.g.mapleader = " "
 
 vim.opt.winborder = "single"
-vim.o.pumheight = 10 -- max autocompletions height
+

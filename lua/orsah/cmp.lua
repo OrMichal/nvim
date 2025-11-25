@@ -1,5 +1,9 @@
 local cmp = require("cmp")
 
+cmp.setup.filetype({"vue", "typescript", "typescript"}, {
+  enabled = false
+})
+
 cmp.setup({
   experimental = {
     ghost_text = true,
@@ -15,21 +19,21 @@ cmp.setup({
   mapping = {
     ["<C-Space>"] = cmp.mapping.complete(),                 -- manual trigger
     ["<CR>"]      = cmp.mapping.confirm({ select = false }), -- only insert when confirmed
-    ["<Tab>"]     = cmp.mapping.select_next_item(),
-    ["<S-Tab>"]   = cmp.mapping.select_prev_item(),
+
+    ["<Down>"]     = cmp.mapping.select_next_item(),
+    ["<Up>"]   = cmp.mapping.select_prev_item(),
+
+    ["<C-Down>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-Up>"] = cmp.mapping.scroll_docs(4),
+
+    ["<Esc>"] = cmp.mapping.close()
   },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "buffer" },
   }),
-})
-
--- Disable cmp for .vue files (Coc will handle completion)
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "vue",
-  callback = function()
-    require("cmp").setup.buffer({
-      enabled = false
-    })
-  end,
+  window = {
+    completion = cmp.config.window.bordered({ border = "none" }),
+    documentation = cmp.config.window.bordered({ border = "none" })
+  }
 })

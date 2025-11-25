@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1761727121/share/lua/5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1761727121/share/lua/5.1/?/init.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1761727121/lib/luarocks/rocks-5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1761727121/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1761727121/lib/lua/5.1/?.so"
+local package_path_str = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/share/lua/5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/share/lua/5.1/?/init.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/lib/luarocks/rocks-5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -99,16 +99,6 @@ _G.packer_plugins = {
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["coc-volar"] = {
-    loaded = true,
-    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/coc-volar",
-    url = "https://github.com/yaegassy/coc-volar"
-  },
-  ["coc-volar-tools"] = {
-    loaded = true,
-    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/coc-volar-tools",
-    url = "https://github.com/yaegassy/coc-volar-tools"
-  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/coc.nvim",
@@ -120,7 +110,7 @@ _G.packer_plugins = {
     url = "https://github.com/theprimeagen/harpoon"
   },
   ["lsp_signature.nvim"] = {
-    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\16hint_enable\2\20floating_window\2\15max_height\3\b\16hint_prefix\tïž” \14max_width\3P\17hi_parameter\vSearch\15toggle_key\n<C-k>\tbind\2\nsetup\18lsp_signature\frequire\0" },
+    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\15max_height\3\b\tbind\2\17hi_parameter\vSearch\15toggle_key\n<C-k>\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\nsetup\18lsp_signature\frequire\0" },
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
@@ -142,6 +132,22 @@ _G.packer_plugins = {
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/mini.nvim",
     url = "https://github.com/echasnovski/mini.nvim"
   },
+  ["neo-tree.nvim"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["noice.nvim"] = {
+    config = { "\27LJ\2\n‘\3\0\0\5\0\22\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\3=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\18\0=\3\19\0024\3\0\0=\3\20\0024\3\0\0=\3\21\2B\0\2\1K\0\1\0\rcommands\vroutes\14popupmenu\1\0\1\fenabled\1\vnotify\1\0\1\fenabled\1\rmessages\1\0\1\fenabled\1\blsp\14signature\1\0\1\fenabled\1\nhover\1\0\1\fenabled\1\rprogress\1\0\3\rprogress\0\14signature\0\nhover\0\1\0\1\fenabled\1\fpresets\1\0\a\rmessages\0\blsp\0\vnotify\0\vroutes\0\rcommands\0\fpresets\0\14popupmenu\0\1\0\1\20command_palette\2\nsetup\nnoice\frequire\0" },
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -159,6 +165,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -193,18 +204,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: mason.nvim
-time([[Config for mason.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
-time([[Config for mason.nvim]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\15max_height\3\b\tbind\2\17hi_parameter\vSearch\15toggle_key\n<C-k>\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
+time([[Config for lsp_signature.nvim]], false)
+-- Config for: noice.nvim
+time([[Config for noice.nvim]], true)
+try_loadstring("\27LJ\2\n‘\3\0\0\5\0\22\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\3=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\18\0=\3\19\0024\3\0\0=\3\20\0024\3\0\0=\3\21\2B\0\2\1K\0\1\0\rcommands\vroutes\14popupmenu\1\0\1\fenabled\1\vnotify\1\0\1\fenabled\1\rmessages\1\0\1\fenabled\1\blsp\14signature\1\0\1\fenabled\1\nhover\1\0\1\fenabled\1\rprogress\1\0\3\rprogress\0\14signature\0\nhover\0\1\0\1\fenabled\1\fpresets\1\0\a\rmessages\0\blsp\0\vnotify\0\vroutes\0\rcommands\0\fpresets\0\14popupmenu\0\1\0\1\20command_palette\2\nsetup\nnoice\frequire\0", "config", "noice.nvim")
+time([[Config for noice.nvim]], false)
 -- Config for: mini.nvim
 time([[Config for mini.nvim]], true)
 try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\17mini.comment\nsetup\15mini.pairs\frequire\0", "config", "mini.nvim")
 time([[Config for mini.nvim]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\16hint_enable\2\20floating_window\2\15max_height\3\b\16hint_prefix\tïž” \14max_width\3P\17hi_parameter\vSearch\15toggle_key\n<C-k>\tbind\2\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
-time([[Config for lsp_signature.nvim]], false)
+-- Config for: mason.nvim
+time([[Config for mason.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
+time([[Config for mason.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
