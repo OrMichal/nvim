@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/share/lua/5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/share/lua/5.1/?/init.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/lib/luarocks/rocks-5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1763148144/lib/lua/5.1/?.so"
+local package_path_str = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1763318511/share/lua/5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763318511/share/lua/5.1/?/init.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763318511/lib/luarocks/rocks-5.1/?.lua;/home/orsah/.cache/nvim/packer_hererocks/2.1.1763318511/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/orsah/.cache/nvim/packer_hererocks/2.1.1763318511/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -104,13 +104,19 @@ _G.packer_plugins = {
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\n©\5\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\nsigns\1\0\1\nsigns\0\14untracked\1\0\4\ahl\16GitSignsAdd\nnumhl\18GitSignsAddNr\ttext\bâ”†\vlinehl\18GitSignsAddLn\17changedelete\1\0\4\ahl\19GitSignsChange\nnumhl\21GitSignsChangeNr\ttext\6~\vlinehl\21GitSignsChangeLn\14topdelete\1\0\4\ahl\19GitSignsDelete\nnumhl\21GitSignsDeleteNr\ttext\bâ€¾\vlinehl\21GitSignsDeleteLn\vdelete\1\0\4\ahl\19GitSignsDelete\nnumhl\21GitSignsDeleteNr\ttext\6_\vlinehl\21GitSignsDeleteLn\vchange\1\0\4\ahl\19GitSignsChange\nnumhl\21GitSignsChangeNr\ttext\bâ”‚\vlinehl\21GitSignsChangeLn\badd\1\0\6\14untracked\0\vdelete\0\14topdelete\0\badd\0\vchange\0\17changedelete\0\1\0\4\ahl\16GitSignsAdd\nnumhl\18GitSignsAddNr\ttext\bâ”‚\vlinehl\18GitSignsAddLn\nsetup\rgitsigns\frequire\0" },
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
   ["lsp_signature.nvim"] = {
-    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\15max_height\3\b\tbind\2\17hi_parameter\vSearch\15toggle_key\n<C-k>\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\nsetup\18lsp_signature\frequire\0" },
+    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\15max_height\3\b\17hi_parameter\vSearch\tbind\2\15toggle_key\n<C-k>\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\nsetup\18lsp_signature\frequire\0" },
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
@@ -137,12 +143,6 @@ _G.packer_plugins = {
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
-  ["noice.nvim"] = {
-    config = { "\27LJ\2\n‘\3\0\0\5\0\22\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\3=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\18\0=\3\19\0024\3\0\0=\3\20\0024\3\0\0=\3\21\2B\0\2\1K\0\1\0\rcommands\vroutes\14popupmenu\1\0\1\fenabled\1\vnotify\1\0\1\fenabled\1\rmessages\1\0\1\fenabled\1\blsp\14signature\1\0\1\fenabled\1\nhover\1\0\1\fenabled\1\rprogress\1\0\3\rprogress\0\14signature\0\nhover\0\1\0\1\fenabled\1\fpresets\1\0\a\rmessages\0\blsp\0\vnotify\0\vroutes\0\rcommands\0\fpresets\0\14popupmenu\0\1\0\1\20command_palette\2\nsetup\nnoice\frequire\0" },
-    loaded = true,
-    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/noice.nvim",
-    url = "https://github.com/folke/noice.nvim"
-  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/nui.nvim",
@@ -157,6 +157,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    config = { "\27LJ\2\nŠ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\venable\2\rthrottle\2\15trim_scope\nouter\22min_window_height\3\0\14max_lines\3\5\nsetup\23treesitter-context\frequire\0" },
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-ts-autotag"] = {
     config = { "\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0" },
@@ -196,6 +202,11 @@ _G.packer_plugins = {
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/vim-vsnip",
@@ -204,22 +215,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\15max_height\3\b\tbind\2\17hi_parameter\vSearch\15toggle_key\n<C-k>\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
-time([[Config for lsp_signature.nvim]], false)
--- Config for: noice.nvim
-time([[Config for noice.nvim]], true)
-try_loadstring("\27LJ\2\n‘\3\0\0\5\0\22\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\3=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\18\0=\3\19\0024\3\0\0=\3\20\0024\3\0\0=\3\21\2B\0\2\1K\0\1\0\rcommands\vroutes\14popupmenu\1\0\1\fenabled\1\vnotify\1\0\1\fenabled\1\rmessages\1\0\1\fenabled\1\blsp\14signature\1\0\1\fenabled\1\nhover\1\0\1\fenabled\1\rprogress\1\0\3\rprogress\0\14signature\0\nhover\0\1\0\1\fenabled\1\fpresets\1\0\a\rmessages\0\blsp\0\vnotify\0\vroutes\0\rcommands\0\fpresets\0\14popupmenu\0\1\0\1\20command_palette\2\nsetup\nnoice\frequire\0", "config", "noice.nvim")
-time([[Config for noice.nvim]], false)
--- Config for: mini.nvim
-time([[Config for mini.nvim]], true)
-try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\17mini.comment\nsetup\15mini.pairs\frequire\0", "config", "mini.nvim")
-time([[Config for mini.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n©\5\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\nsigns\1\0\1\nsigns\0\14untracked\1\0\4\ahl\16GitSignsAdd\nnumhl\18GitSignsAddNr\ttext\bâ”†\vlinehl\18GitSignsAddLn\17changedelete\1\0\4\ahl\19GitSignsChange\nnumhl\21GitSignsChangeNr\ttext\6~\vlinehl\21GitSignsChangeLn\14topdelete\1\0\4\ahl\19GitSignsDelete\nnumhl\21GitSignsDeleteNr\ttext\bâ€¾\vlinehl\21GitSignsDeleteLn\vdelete\1\0\4\ahl\19GitSignsDelete\nnumhl\21GitSignsDeleteNr\ttext\6_\vlinehl\21GitSignsDeleteLn\vchange\1\0\4\ahl\19GitSignsChange\nnumhl\21GitSignsChangeNr\ttext\bâ”‚\vlinehl\21GitSignsChangeLn\badd\1\0\6\14untracked\0\vdelete\0\14topdelete\0\badd\0\vchange\0\17changedelete\0\1\0\4\ahl\16GitSignsAdd\nnumhl\18GitSignsAddNr\ttext\bâ”‚\vlinehl\18GitSignsAddLn\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Config for: mason.nvim
 time([[Config for mason.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
 time([[Config for mason.nvim]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\15max_height\3\b\17hi_parameter\vSearch\tbind\2\15toggle_key\n<C-k>\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
+time([[Config for lsp_signature.nvim]], false)
+-- Config for: nvim-treesitter-context
+time([[Config for nvim-treesitter-context]], true)
+try_loadstring("\27LJ\2\nŠ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\venable\2\rthrottle\2\15trim_scope\nouter\22min_window_height\3\0\14max_lines\3\5\nsetup\23treesitter-context\frequire\0", "config", "nvim-treesitter-context")
+time([[Config for nvim-treesitter-context]], false)
+-- Config for: mini.nvim
+time([[Config for mini.nvim]], true)
+try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\17mini.comment\nsetup\15mini.pairs\frequire\0", "config", "mini.nvim")
+time([[Config for mini.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

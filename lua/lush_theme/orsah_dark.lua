@@ -38,5 +38,8 @@ return lush(function()
 
     CursorLine   { bg = palette.bg2 },
     Visual       { bg = palette.bg2.lighten(8) },
+    TreesitterContext        { fg = hsl(220, 30, 90), bg = hsl(237, 16, 23), gui = "bold" },
+    TreesitterContextLineNumber { fg = hsl(220, 40, 70), bg = hsl(220, 10, 15) },
+    TreesitterContextSeparator  { fg = hsl(220, 40, 50), bg = hsl(220, 10, 15) },
   }
 end)

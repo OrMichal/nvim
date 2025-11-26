@@ -11,7 +11,25 @@ return require("packer").startup(function(use)
 
   use("rktjmp/lush.nvim")
 
-  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate"
+  }
+
+  use {
+    "nvim-treesitter/nvim-treesitter-context",
+    requires = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("treesitter-context").setup{
+        enable = true,
+        max_lines = 5,
+        min_window_height = 0,
+        trim_scope = "outer",
+        throttle = true
+      }
+    end
+  }
+
   use("nvim-treesitter/playground")
   use("theprimeagen/harpoon")
   use("mbbill/undotree")
@@ -104,6 +122,7 @@ return require("packer").startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+  --[[
   use "nvim-lua/plenary.nvim"   -- required
   use "MunifTanjim/nui.nvim"    -- required
 
@@ -143,5 +162,37 @@ return require("packer").startup(function(use)
         }
       })
     end
+  }
+  --]]
+  use("tpope/vim-fugitive")
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup({
+       signs = {
+        add = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+        change = {
+         hl = "GitSignsChange",
+         text = "│",
+         numhl = "GitSignsChangeNr",
+         linehl = "GitSignsChangeLn",
+        },
+        delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+        topdelete = {
+         hl = "GitSignsDelete",
+         text = "‾",
+         numhl = "GitSignsDeleteNr",
+         linehl = "GitSignsDeleteLn",
+        },
+        changedelete = {
+         hl = "GitSignsChange",
+         text = "~",
+         numhl = "GitSignsChangeNr",
+         linehl = "GitSignsChangeLn",
+        },
+        untracked = { hl = "GitSignsAdd", text = "┆", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+       },
+      })
+     end,
   }
 end)
