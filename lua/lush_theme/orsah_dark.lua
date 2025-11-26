@@ -6,7 +6,7 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 --]]
 
 local palette = {
-  bg      = hsl(0,   0,  10),
+  bg      = hsl(0,   0, 10),
   bg2     = hsl(40,  5,  14),
   fg      = hsl(33, 42,  84),
   comment = hsl(28,  9,  43),

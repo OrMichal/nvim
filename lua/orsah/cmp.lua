@@ -33,7 +33,7 @@ cmp.setup({
     { name = "buffer" },
   }),
   window = {
-    completion = cmp.config.window.bordered({ border = "none" }),
-    documentation = cmp.config.window.bordered({ border = "none" })
+    completion = cmp.config.window.bordered({ border = "rounded" }),
+    documentation = cmp.config.window.bordered({ border = "rounded" })
   }
 })

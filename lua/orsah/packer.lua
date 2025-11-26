@@ -113,15 +113,79 @@ return require("packer").startup(function(use)
     end
   }
   --]]
-  use {
+  use({
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     requires = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
+      "nvim-tree/nvim-web-devicons", -- optional but nice
       "MunifTanjim/nui.nvim",
-    }
-  }
+    },
+    config = function()
+      -- Close Neotree before exiting nvim
+      vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
+      require("neo-tree").setup({
+        close_if_last_window = true, -- Auto-close when it's the last window
+        popup_border_style = "rounded",
+        enable_git_status = true,
+        enable_diagnostics = true,
+
+        default_component_configs = {
+          indent = {
+            indent_size = 2,
+            padding = 1,
+          },
+          icon = {
+            folder_closed = "󰉋",
+            folder_open = "󰝰",
+            folder_empty = "󰉖",
+          },
+          git_status = {
+            symbols = {
+              added     = "",
+              modified  = "",
+              deleted   = "",
+              renamed   = "󰑕",
+              untracked = "",
+              ignored   = "",
+              unstaged  = "󰄱",
+              staged    = "",
+              conflict  = "",
+            },
+          },
+        },
+
+        window = {
+          position = "left",
+          width = 32,
+          mappings = {
+            ["<space>"] = "toggle_node",
+            ["<cr>"] = "open",
+            ["o"] = "open",
+            ["s"] = "open_split",
+            ["v"] = "open_vsplit",
+          },
+        },
+
+        filesystem = {
+          follow_current_file = {
+            enabled = true,
+          },
+          group_empty_dirs = true,
+          use_libuv_file_watcher = true,
+          filtered_items = {
+            visible = false,
+            hide_dotfiles = false,
+            hide_gitignored = true,
+          },
+        },
+      })
+
+      -- Keybinding: Toggle Neo-tree
+      vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { silent = true })
+    end
+  })
   --[[
   use "nvim-lua/plenary.nvim"   -- required
   use "MunifTanjim/nui.nvim"    -- required

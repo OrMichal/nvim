@@ -35,9 +35,8 @@ local function language_icon()
   local icon, color = devicons.get_icon_color_by_filetype(vim.bo.filetype)
 
   if icon then
-    -- create highlight group dynamically
     vim.api.nvim_set_hl(0, "StatusLanguageIconDynamic", { fg = color, bg = "#313244" })
-    return "%#StatusLanguageIconDynamic#" .. icon .. "%*"
+    return "%#StatusLanguageIconDynamic#" .. icon
   else
     return ""
   end

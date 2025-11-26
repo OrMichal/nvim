@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", ":Neotree<CR>")
 vim.keymap.set("n", "<leader>t", ":split | terminal<CR> i clear<CR>", { noremap = true, silent = true})
 
 vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Window actions" })
@@ -24,4 +24,8 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.o.completeopt = "menuone,noinsert,noselect"  -- best for Coc
 vim.o.shortmess = vim.o.shortmess .. "c"
 
-vim.keymap.set("n", "<leader>n", ":Neotree<CR>", { desc = "Opens a Neotree file browser" });
+-- window resizing
+vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
+vim.keymap.set("n", "<C-Down>", ":resize +2<CR>")
+vim.keymap.set("n", "<C-Left>", ":vertical resize +2<CR>")
+vim.keymap.set("n", "<C-Right>", ":vertical resize -2<CR>")
