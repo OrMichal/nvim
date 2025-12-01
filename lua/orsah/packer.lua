@@ -86,148 +86,6 @@ return require("packer").startup(function(use)
       require('nvim-ts-autotag').setup()
     end
   }
---[[
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      local wk = require("which-key")
-
-      wk.setup {
-        plugins = {
-          spelling = { enabled = true },
-        },
-        win = {
-          border = "single",
-          position = "right",
-          margin = { 0, 0, 1, 0 },
-          padding = { 1, 2, 1, 2 },
-          winblend = 20,
-          zindex = 1000
-        },
-        layout = {
-          align = "right",
-          spacing = 3
-        },
-        show_help = false,
-      }
-    end
-  }
-  --]]
-  use({
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- optional but nice
-      "MunifTanjim/nui.nvim",
-    },
-    config = function()
-      -- Close Neotree before exiting nvim
-      vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
-      require("neo-tree").setup({
-        close_if_last_window = true, -- Auto-close when it's the last window
-        popup_border_style = "rounded",
-        enable_git_status = true,
-        enable_diagnostics = true,
-
-        default_component_configs = {
-          indent = {
-            indent_size = 2,
-            padding = 1,
-          },
-          icon = {
-            folder_closed = "󰉋",
-            folder_open = "󰝰",
-            folder_empty = "󰉖",
-          },
-          git_status = {
-            symbols = {
-              added     = "",
-              modified  = "",
-              deleted   = "",
-              renamed   = "󰑕",
-              untracked = "",
-              ignored   = "",
-              unstaged  = "󰄱",
-              staged    = "",
-              conflict  = "",
-            },
-          },
-        },
-
-        window = {
-          position = "left",
-          width = 32,
-          mappings = {
-            ["<space>"] = "toggle_node",
-            ["<cr>"] = "open",
-            ["o"] = "open",
-            ["s"] = "open_split",
-            ["v"] = "open_vsplit",
-          },
-        },
-
-        filesystem = {
-          follow_current_file = {
-            enabled = true,
-          },
-          group_empty_dirs = true,
-          use_libuv_file_watcher = true,
-          filtered_items = {
-            visible = false,
-            hide_dotfiles = false,
-            hide_gitignored = true,
-          },
-        },
-      })
-
-      -- Keybinding: Toggle Neo-tree
-      vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { silent = true })
-    end
-  })
-  --[[
-  use "nvim-lua/plenary.nvim"   -- required
-  use "MunifTanjim/nui.nvim"    -- required
-
-  use {
-    "folke/noice.nvim",
-    config = function()
-      require("noice").setup({
-        -- disable everything except commandline UI
-        lsp = {
-          progress = { enabled = false },
-          hover = { enabled = false },
-          signature = { enabled = false },
-        },
-        messages = { enabled = false },
-        notify = { enabled = false },
-        popupmenu = { enabled = false },
-        routes = {},
-        commands = {},
-        cmdline = {
-          view = "cmdline_popup"
-        },
-        views = {
-          cmdline_popup = {
-            position = {
-              row = 2,
-              col = "50%",
-            },
-            size = {
-              width = 70,
-              height = "auto",
-            },
-            border = {
-              style = "single",
-              padding = { 0, 1 },
-            }
-          }
-        }
-      })
-    end
-  }
-  --]]
   use("tpope/vim-fugitive")
   use {
     "lewis6991/gitsigns.nvim",
@@ -273,4 +131,24 @@ return require("packer").startup(function(use)
       })
     end
   }
+  use("nvim-tree/nvim-web-devicons")
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      local npairs = require("nvim-autopairs")
+      npairs.setup({})
+
+      -- cmp integration
+      local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+      local cmp = require("cmp")
+      cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+    end
+  }
+  use({
+    "folke/noice.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify"
+    }
+  })
 end)

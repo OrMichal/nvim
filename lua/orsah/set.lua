@@ -31,14 +31,3 @@ vim.g.mapleader = " "
 
 vim.opt.winborder = "single"
 
--- window separators
-vim.opt.fillchars = {
-  eob = " ",
-  vert = "▏",
-  horiz = "─",
-}
-
-vim.api.nvim_set_hl(0, "WinSeparator", {
-  fg = "#4e4e4e",
-  bg = "NONE",
-})

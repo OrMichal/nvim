@@ -4,21 +4,23 @@ cmp.setup.filetype({"vue", "typescript", "typescript"}, {
   enabled = false
 })
 
+vim.api.nvim_set_hl(0, "CmpNormal", { bg="#313244" })
+
 cmp.setup({
   experimental = {
     ghost_text = true,
   },
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- or your snippet engine
+      vim.fn["vsnip#anonymous"](args.body)
     end,
   },
   completion = {
-    autocomplete = { cmp.TriggerEvent.TextChanged }, -- auto-trigger while typing
+    autocomplete = { cmp.TriggerEvent.TextChanged },
   },
   mapping = {
-    ["<C-Space>"] = cmp.mapping.complete(),                 -- manual trigger
-    ["<CR>"]      = cmp.mapping.confirm({ select = false }), -- only insert when confirmed
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<CR>"]      = cmp.mapping.confirm({ select = false }),
 
     ["<Down>"]     = cmp.mapping.select_next_item(),
     ["<Up>"]   = cmp.mapping.select_prev_item(),
@@ -33,7 +35,14 @@ cmp.setup({
     { name = "buffer" },
   }),
   window = {
-    completion = cmp.config.window.bordered({ border = "rounded" }),
-    documentation = cmp.config.window.bordered({ border = "rounded" })
+    completion = {
+      border = "none",
+      winhighlight = "Normal:CmpNormal",
+    },
+    documentation = {
+      border = "none",
+      winhighlight = "Normal:CmpNormal",
+      side_padding = 1,
+    }
   }
 })

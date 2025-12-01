@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", ":Neotree<CR>")
+vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 vim.keymap.set("n", "<leader>t", ":split | terminal<CR> i clear<CR>", { noremap = true, silent = true})
 
 vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Window actions" })
@@ -29,3 +29,6 @@ vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
 vim.keymap.set("n", "<C-Down>", ":resize +2<CR>")
 vim.keymap.set("n", "<C-Left>", ":vertical resize +2<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize -2<CR>")
+
+-- message log
+vim.keymap.set("n", "<leader>ml", ":Telescope notify<CR>")
