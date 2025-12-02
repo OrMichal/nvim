@@ -25,10 +25,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.diagnostic.config({
   virtual_lines = true,
-
-  virtual_text = true,
+  --virtual_text = true,
   underline = true,
-  update_in_insert = false,
+  update_in_insert = true,
   severity_sort = true,
   float = {
     border = "rounded",
@@ -46,6 +45,7 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.WARN] = "WarningMsg",
     },
   },
+  duplicate = true
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
