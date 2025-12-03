@@ -244,3 +244,12 @@ vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter", "FileType" }, {
     vim.opt_local.statusline = "%!v:lua.Statusline.short()"
   end,
 })
+
+vim.api.nvim_set_hl(0, "CocPumBorder", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "CocPumMenu", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "CocPumVirtualText", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "CocPumHighlight", { fg = "NONE", bg = "NONE" })
+
+-- Base popup menu highlight groups
+vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "NONE" })
+vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#444444", fg = "#ffffff" })
