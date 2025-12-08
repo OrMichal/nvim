@@ -122,5 +122,7 @@ return lush(function()
     CmpItemKindKeyword  { fg = palette.keyword },
     CmpItemKindSnippet  { fg = palette.accent },
 
+    AlphaHeader { fg = palette.accent }
+
   }
 end)

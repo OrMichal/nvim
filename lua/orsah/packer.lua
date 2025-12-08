@@ -10,7 +10,6 @@ return require("packer").startup(function(use)
   }
 
   use("rktjmp/lush.nvim")
-
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
@@ -151,4 +150,11 @@ return require("packer").startup(function(use)
       "rcarriga/nvim-notify"
     }
   })
+  use {
+    'goolord/alpha-nvim',
+    requires = {
+      'nvim-mini/mini.icons',
+      'nvim-lua/plenary.nvim'
+    },
+  }
 end)

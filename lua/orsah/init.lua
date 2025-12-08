@@ -9,5 +9,6 @@ require("orsah.auto-pairs")
 require("orsah.noice")
 require("orsah.netrw")
 require("orsah.coc")
+require("orsah.alpha")
 
 vim.opt.clipboard = "unnamedplus"
