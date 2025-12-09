@@ -9,18 +9,7 @@ vim.lsp.enable({
   "ts_ls",
   "svelte",
   "rust_analyzer",
-  "tailwindcss"
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-  callback = function(args)
-    local ft = args.match
-    if ft == "vue" or ft == "typescript" then
-      vim.b.coc_enabled = 1
-    else
-      vim.b.coc_enabled = 0
-    end
-  end,
+  "tailwindcss",
 })
 
 vim.diagnostic.config({
