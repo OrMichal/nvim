@@ -20,8 +20,9 @@ return lush(function()
   return {
 
     -- Core Editor
-    Normal       { fg = palette.fg, bg = palette.bg },
-    NormalFloat  { fg = palette.fg, bg = palette.bg2 },
+    Normal       { fg = palette.fg, bg = "none" },
+    NormalFloat  { fg = palette.fg, bg = "none" },
+    EndOfBuffer { fg = palette.fg, bg = "none" },
     Comment      { fg = palette.comment, gui = "italic" },
     CursorLine   { bg = palette.bg2 },
     CursorLineNr { fg = palette.accent, bg = palette.bg2 },
@@ -104,8 +105,8 @@ return lush(function()
     TreesitterContextSeparator  { fg = hsl(220, 40, 50), bg = hsl(220, 10, 15) },
 
     -- Telescope
-    TelescopeBorder     { fg = palette.comment, bg = palette.bg2 },
-    TelescopePromptBorder{ fg = palette.comment, bg = palette.bg2 },
+    TelescopeBorder     { fg = palette.comment, bg = "none" },
+    TelescopePromptBorder{ fg = palette.comment, bg = "none" },
     TelescopePromptTitle { fg = palette.bg, bg = palette.accent, gui = "bold" },
     TelescopeResultsTitle{ fg = palette.bg, bg = palette.keyword, gui = "bold" },
     TelescopeMatching    { fg = palette.accent, gui = "bold" },

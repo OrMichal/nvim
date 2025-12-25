@@ -1,24 +1,54 @@
 {
+  // Diagnostics
   "diagnostic.checkCurrentLine": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.virtualText": true,
 
-  "diagnostic.hintSign": "H",
-  "diagnostic.infoSign": "I",
-  "diagnostic.errorSign": "E",
-  "diagnostic.warningSign": "W",
+  "diagnostic.hintSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
 
+  // Hover docs
   "hover.floatConfig": {
     "border": true,
-    "rounded": true
+    "rounded": true,
+    "maxWidth": 80,
+    "maxHeight": 20
   },
 
+  // Completion menu
+  "suggest.enablePreselect": true,          // preselect the most relevant item
+  "suggest.detailField": "abbr",            // show extra info in menu
+  "suggest.snippetIndicator": "",          // icon for snippet completions
+  "suggest.maxCompleteItemCount": 50,       // larger menu capacity
+  "suggest.timeout": 5000,                  // wait longer for LSP responses
   "suggest.virtualText": true,
   "suggest.enableFloat": true,
   "suggest.floatConfig": {
-    "border": false,
+    "border": true,
+    "rounded": true,
+    "maxWidth": 100
   },
-  "suggest.pubFloat": false,
+  "suggest.preview": true,                  // preview completion in buffer
+  "suggest.triggerAfterInsertEnter": true,  // trigger immediately after entering insert mode
+  "suggest.localityBonus": true,            // prioritize words near cursor
+  "suggest.lowPrioritySourceLimit": 5,      // limit noisy sources
+  "suggest.highPrioritySourceLimit": 20,    // allow more from LSP/snippets
+  "suggest.defaultSortMethod": "length",    // shorter matches first
+  "suggest.noselect": false,                // auto-select first item
+
+  // Floating docs for completion
+  "suggest.floatEnable": true,
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "maxWidth": 80
+  },
+
+  // Code actions
   "codeActionOnSave": ["source.organizeImports"],
-  "typescript.tsserver.pluginPaths": ["@vue/typescript-plugin"]
+
+  // Vue + TS integration
+  "typescript.tsserver.pluginPaths": ["@vue/typescript-plugin"],
 }

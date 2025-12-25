@@ -46,3 +46,13 @@ cmp.setup({
     }
   }
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    if vim.bo.filetype ~= "vue" then
+      vim.b.coc_enabled = false
+    else
+      vim.b.coc_enabled = true
+    end
+  end,
+})
