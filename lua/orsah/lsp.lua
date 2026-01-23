@@ -10,6 +10,7 @@ vim.lsp.enable({
   "svelte",
   "rust_analyzer",
   "tailwindcss",
+  "angularls"
 })
 
 vim.diagnostic.config({

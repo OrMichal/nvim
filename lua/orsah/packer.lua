@@ -171,4 +171,5 @@ return require("packer").startup(function(use)
 
 	use({ "nvimtools/none-ls.nvim" })
 	use({ "nvim-lualine/lualine.nvim" })
+  use({ "onsails/lspkind.nvim" })
 end)

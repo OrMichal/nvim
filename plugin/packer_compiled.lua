@@ -115,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/neoclide/coc.nvim"
   },
   ["gitsigns.nvim"] = {
-    config = { "\27LJ\2\n©\5\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\nsigns\1\0\1\nsigns\0\14untracked\1\0\4\ahl\16GitSignsAdd\vlinehl\18GitSignsAddLn\ttext\bâ”†\nnumhl\18GitSignsAddNr\17changedelete\1\0\4\ahl\19GitSignsChange\vlinehl\21GitSignsChangeLn\ttext\6~\nnumhl\21GitSignsChangeNr\14topdelete\1\0\4\ahl\19GitSignsDelete\vlinehl\21GitSignsDeleteLn\ttext\bâ€¾\nnumhl\21GitSignsDeleteNr\vdelete\1\0\4\ahl\19GitSignsDelete\vlinehl\21GitSignsDeleteLn\ttext\6_\nnumhl\21GitSignsDeleteNr\vchange\1\0\4\ahl\19GitSignsChange\vlinehl\21GitSignsChangeLn\ttext\bâ”‚\nnumhl\21GitSignsChangeNr\badd\1\0\6\badd\0\vdelete\0\vchange\0\17changedelete\0\14untracked\0\14topdelete\0\1\0\4\ahl\16GitSignsAdd\vlinehl\18GitSignsAddLn\ttext\bâ”‚\nnumhl\18GitSignsAddNr\nsetup\rgitsigns\frequire\0" },
+    config = { "\27LJ\2\n©\5\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\nsigns\1\0\1\nsigns\0\14untracked\1\0\4\vlinehl\18GitSignsAddLn\nnumhl\18GitSignsAddNr\ttext\bâ”†\ahl\16GitSignsAdd\17changedelete\1\0\4\vlinehl\21GitSignsChangeLn\nnumhl\21GitSignsChangeNr\ttext\6~\ahl\19GitSignsChange\14topdelete\1\0\4\vlinehl\21GitSignsDeleteLn\nnumhl\21GitSignsDeleteNr\ttext\bâ€¾\ahl\19GitSignsDelete\vdelete\1\0\4\vlinehl\21GitSignsDeleteLn\nnumhl\21GitSignsDeleteNr\ttext\6_\ahl\19GitSignsDelete\vchange\1\0\4\vlinehl\21GitSignsChangeLn\nnumhl\21GitSignsChangeNr\ttext\bâ”‚\ahl\19GitSignsChange\badd\1\0\6\17changedelete\0\vchange\0\14topdelete\0\14untracked\0\badd\0\vdelete\0\1\0\4\vlinehl\18GitSignsAddLn\nnumhl\18GitSignsAddNr\ttext\bâ”‚\ahl\16GitSignsAdd\nsetup\rgitsigns\frequire\0" },
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
@@ -126,10 +126,15 @@ _G.packer_plugins = {
     url = "https://github.com/theprimeagen/harpoon"
   },
   ["lsp_signature.nvim"] = {
-    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\17hi_parameter\vSearch\16hint_enable\2\16hint_prefix\tïž” \tbind\2\20floating_window\2\14max_width\3P\15max_height\3\b\15toggle_key\n<C-k>\nsetup\18lsp_signature\frequire\0" },
+    config = { "\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\17hi_parameter\vSearch\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\15max_height\3\b\15toggle_key\n<C-k>\tbind\2\nsetup\18lsp_signature\frequire\0" },
     loaded = true,
     path = "/home/orsah/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/home/orsah/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -267,6 +272,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: mason.nvim
+time([[Config for mason.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
+time([[Config for mason.nvim]], false)
+-- Config for: nvim-treesitter-context
+time([[Config for nvim-treesitter-context]], true)
+try_loadstring("\27LJ\2\nŠ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\rthrottle\2\15trim_scope\nouter\22min_window_height\3\0\14max_lines\3\5\venable\2\nsetup\23treesitter-context\frequire\0", "config", "nvim-treesitter-context")
+time([[Config for nvim-treesitter-context]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\17hi_parameter\vSearch\16hint_prefix\tïž” \16hint_enable\2\20floating_window\2\14max_width\3P\15max_height\3\b\15toggle_key\n<C-k>\tbind\2\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
+time([[Config for lsp_signature.nvim]], false)
 -- Config for: nvim-lint
 time([[Config for nvim-lint]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\rtry_lint\tlint\frequire¿\1\1\0\5\0\r\0\0166\0\0\0'\2\1\0B\0\2\0025\1\4\0005\2\3\0=\2\5\1=\1\2\0006\0\6\0009\0\a\0009\0\b\0005\2\t\0005\3\v\0003\4\n\0=\4\f\3B\0\3\1K\0\1\0\rcallback\1\0\1\rcallback\0\0\1\2\0\0\17BufWritePost\24nvim_create_autocmd\bapi\bvim\trust\1\0\1\trust\0\1\2\0\0\vclippy\18linters_by_ft\tlint\frequire\0", "config", "nvim-lint")
@@ -275,26 +292,14 @@ time([[Config for nvim-lint]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n¼\1\0\0\t\0\t\0\0206\0\0\0'\2\1\0B\0\2\0029\1\2\0004\3\0\0B\1\2\0016\1\0\0'\3\3\0B\1\2\0026\2\0\0'\4\4\0B\2\2\0029\3\5\2\18\5\3\0009\3\6\3'\6\a\0009\a\b\1B\a\1\0A\3\2\1K\0\1\0\20on_confirm_done\17confirm_done\aon\nevent\bcmp\"nvim-autopairs.completion.cmp\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: nvim-treesitter-context
-time([[Config for nvim-treesitter-context]], true)
-try_loadstring("\27LJ\2\nŠ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\rthrottle\2\15trim_scope\nouter\22min_window_height\3\0\14max_lines\3\5\venable\2\nsetup\23treesitter-context\frequire\0", "config", "nvim-treesitter-context")
-time([[Config for nvim-treesitter-context]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n©\5\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\nsigns\1\0\1\nsigns\0\14untracked\1\0\4\vlinehl\18GitSignsAddLn\nnumhl\18GitSignsAddNr\ttext\bâ”†\ahl\16GitSignsAdd\17changedelete\1\0\4\vlinehl\21GitSignsChangeLn\nnumhl\21GitSignsChangeNr\ttext\6~\ahl\19GitSignsChange\14topdelete\1\0\4\vlinehl\21GitSignsDeleteLn\nnumhl\21GitSignsDeleteNr\ttext\bâ€¾\ahl\19GitSignsDelete\vdelete\1\0\4\vlinehl\21GitSignsDeleteLn\nnumhl\21GitSignsDeleteNr\ttext\6_\ahl\19GitSignsDelete\vchange\1\0\4\vlinehl\21GitSignsChangeLn\nnumhl\21GitSignsChangeNr\ttext\bâ”‚\ahl\19GitSignsChange\badd\1\0\6\17changedelete\0\vchange\0\14topdelete\0\14untracked\0\badd\0\vdelete\0\1\0\4\vlinehl\18GitSignsAddLn\nnumhl\18GitSignsAddNr\ttext\bâ”‚\ahl\16GitSignsAdd\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Config for: mini.nvim
 time([[Config for mini.nvim]], true)
 try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\17mini.comment\nsetup\15mini.pairs\frequire\0", "config", "mini.nvim")
 time([[Config for mini.nvim]], false)
--- Config for: mason.nvim
-time([[Config for mason.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
-time([[Config for mason.nvim]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-try_loadstring("\27LJ\2\nµ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\17hi_parameter\vSearch\16hint_enable\2\16hint_prefix\tïž” \tbind\2\20floating_window\2\14max_width\3P\15max_height\3\b\15toggle_key\n<C-k>\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
-time([[Config for lsp_signature.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n©\5\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\nsigns\1\0\1\nsigns\0\14untracked\1\0\4\ahl\16GitSignsAdd\vlinehl\18GitSignsAddLn\ttext\bâ”†\nnumhl\18GitSignsAddNr\17changedelete\1\0\4\ahl\19GitSignsChange\vlinehl\21GitSignsChangeLn\ttext\6~\nnumhl\21GitSignsChangeNr\14topdelete\1\0\4\ahl\19GitSignsDelete\vlinehl\21GitSignsDeleteLn\ttext\bâ€¾\nnumhl\21GitSignsDeleteNr\vdelete\1\0\4\ahl\19GitSignsDelete\vlinehl\21GitSignsDeleteLn\ttext\6_\nnumhl\21GitSignsDeleteNr\vchange\1\0\4\ahl\19GitSignsChange\vlinehl\21GitSignsChangeLn\ttext\bâ”‚\nnumhl\21GitSignsChangeNr\badd\1\0\6\badd\0\vdelete\0\vchange\0\17changedelete\0\14untracked\0\14topdelete\0\1\0\4\ahl\16GitSignsAdd\vlinehl\18GitSignsAddLn\ttext\bâ”‚\nnumhl\18GitSignsAddNr\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
